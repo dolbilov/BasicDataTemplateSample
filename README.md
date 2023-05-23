@@ -28,8 +28,7 @@ Basic sample to learn about data templates.
 
 ## 👀 **Visuals**
 
-![Screenshot of main page](https://i.imgur.com/kxODIvS.png)
-![Screenshot of main page](https://i.imgur.com/vxMeT0g.png)
+![Screenshot of main page](https://i.imgur.com/szsCyqU.png)
 
 ## ⬇️ **Installation**
 
