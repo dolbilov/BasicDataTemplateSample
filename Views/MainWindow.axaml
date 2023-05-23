@@ -17,8 +17,8 @@
         <vm:MainWindowViewModel />
     </Design.DataContext>
 
-    <Window.DataTemplates>
-        <DataTemplate DataType="m:Person" x:Key="My.DataTemplates.Person">
+    <Window.Resources>
+        <DataTemplate DataType="m:Person" x:Key="MyDataTemplates.Person">
             <Grid ColumnDefinitions="Auto, *" RowDefinitions="Auto, Auto, Auto, Auto">
                 <TextBlock
                     Grid.Column="0"
@@ -56,6 +56,22 @@
                     Grid.Row="3"
                     Text="{Binding Sex}" />
             </Grid>
+        </DataTemplate>
+    </Window.Resources>
+
+    <Window.DataTemplates>
+        <DataTemplate DataType="m:Student">
+            <StackPanel>
+                <TextBlock FontWeight="Bold" Text="{Binding Grade, StringFormat='I am a student in {0} grade'}" />
+                <ContentControl Content="{Binding}" ContentTemplate="{DynamicResource MyDataTemplates.Person}" />
+            </StackPanel>
+        </DataTemplate>
+
+        <DataTemplate DataType="m:Teacher">
+            <StackPanel>
+                <TextBlock FontWeight="Bold" Text="{Binding Subject, StringFormat='I am a teacher for &quot;{0}&quot;'}" />
+                <ContentControl Content="{Binding}" ContentTemplate="{DynamicResource MyDataTemplates.Person}" />
+            </StackPanel>
         </DataTemplate>
     </Window.DataTemplates>
 
